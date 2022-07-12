@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { IndexPage, SearchPage, UserDataPage, RepoPage } from './pages';
+import { IndexPage, SearchPage, UserDataPage, RepoPage, Page404 } from './pages';
 import { NavBar } from './components/NavBar';
 
 function App() {
@@ -9,14 +9,17 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes path='/' >
+
         <Route path='/' element={<IndexPage />} />
         <Route path='search'>
+
           <Route path='/search' element={<SearchPage />} />
-          <Route path=':UserDataPage' element={<UserDataPage />} >
+          <Route path=':username' element={<UserDataPage />} >
             <Route path=':repo' element={<RepoPage />} />
+
           </Route>
         </Route>
-
+        <Route path='*' element={<Page404 />} />
       </Routes>
     </div>
   );
