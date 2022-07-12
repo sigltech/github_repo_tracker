@@ -1,0 +1,25 @@
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+button {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    background: rgb(101, 221, 215);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: rgb(18, 75, 98);
+}
