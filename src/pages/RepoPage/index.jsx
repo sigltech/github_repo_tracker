@@ -1,20 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { RepoCard } from "../../components/RepoCard";
 import { useParams } from "react-router-dom";
-import { SearchForm } from '../../components/SearchForm';
-// import { RepoContext } from "../../context/RepoContext";
 
 export default function RepoPage(submitValue) {
     const {name} = useParams();
-    // const [repo, setRepo] = useContext(RepoContext);
+    const [repo, setRepo] = useState({});
 
     useEffect( () => {
 
         async function fetchRepo(name) {
 
-            const GITHUB_USER_URL = `https://api.github.com/repos/sigltech/cake_website`;
-
+            const GITHUB_USER_URL = `https://api.github.com/repos/sigltech/Cake_website`;
             const result = await axios.get(GITHUB_USER_URL)
             setRepo(result.data);
             console.log(result.data)
