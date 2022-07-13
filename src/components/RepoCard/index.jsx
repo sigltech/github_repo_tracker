@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
+import React from "react";
 
 export function RepoCard(repo) {
-    // const { name } = useParams();
     console.log(repo)
     return (
         <>
