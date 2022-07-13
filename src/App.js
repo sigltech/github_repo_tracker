@@ -13,11 +13,9 @@ function App() {
 
         <Route path='/' element={<IndexPage />} />
         <Route path='search'>
-
-          <Route path='/search' element={<SearchPage />} />          
+          <Route path='/search' element={<SearchPage />} />
             <Route path=':repo' element={<RepoPage />} />
-
-          </Route>
+        </Route>
         <Route path='*' element={<Page404 />} />
       </Routes>
     </div>       
