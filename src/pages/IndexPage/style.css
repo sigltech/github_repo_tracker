@@ -2,11 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 h1 {
+    margin: 0;
     font-size: 3rem;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 button {
@@ -23,3 +28,5 @@ button {
 button:hover {
     background: rgb(18, 75, 98);
 }
+
+/* index image  */
