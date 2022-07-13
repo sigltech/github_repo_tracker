@@ -1,0 +1,13 @@
+.repo-h1-name {
+    font-size: 3rem;
+    z-index: 1;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.repo-fullname {
+    font-size: 1rem;
+    margin: 0;
+}
+
+

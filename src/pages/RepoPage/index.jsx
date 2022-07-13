@@ -2,6 +2,7 @@ import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { RepoCard } from "../../components/RepoCard";
 import { useParams } from "react-router-dom";
+import './style.css'
 
 export default function RepoPage({ submitValue }) {
     const {name} = useParams();
@@ -20,9 +21,9 @@ export default function RepoPage({ submitValue }) {
         fetchRepo(name);
     }, [name, submitValue])
 
-    return (
+    return (    
         <>
-        <h1>Repo Name: {name}</h1>
+        <h1 className="repo-h1-name">Repo Name: {name}</h1>
         <RepoCard repo={repo}/>
         </>
     )
