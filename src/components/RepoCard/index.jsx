@@ -1,33 +1,25 @@
-// import React, {useContext} from "react";
+// import React, {useEffect} from "react";
 // import {SearchForm} from "../SearchForm";
-
+// import {useParams} from 'react-router-dom';
 
 // export default function RepoCard() {
+//     const {name} = useParams(name)
+//     const [repo, setRepo] = useState({: {}, : {}});
 
-//     const[repos, setRepos] = useContext(ReposContext);
+//     return (
+//         <>
+//             <h1>{username}\'s Public Repos</h1>
 
-    // function renderPublicRepoCount(userData){
-    //     const count = userData.public_repos;
-    //     const span = document.getElementById('repo-count');
-    //     span.textContent = count;
-    //     const descrip = document.querySelector('#descrip');
-    //     descrip.textContent = ' public repos';
-    //     document.getElementById('name').value = '';
-    // };  
-    // return (
-    //     <>
-    //         <h1>{username}\'s Public Repos</h1>
-    //         {repos ? (repos.map((id) => {
-    //             return(
-    //                 <>
-    //                     <h2>{repos.name}</h2>
-    //                     <h3>{repos.full_name}</h3>
-    //                     <p>{repos.language}</p>
-    //                     <p>{repos.forks_count}</p>
-    //                     <p>{repos.updated_at}</p>
-    //                 </>
-    //             )
-    //         }) ): 'loading'}
-    //     </>
-    // );
-//}
+//                 return(
+//                     <>
+//                         <h2>{repo.name}</h2>
+//                         <h3>{repo.full_name}</h3>
+//                         <p>{repo.language}</p>
+//                         <p>{repo.forks_count}</p>
+//                         <p>{repo.updated_at}</p>
+//                     </>
+//                 )
+             
+//         </>
+//     );
+// }

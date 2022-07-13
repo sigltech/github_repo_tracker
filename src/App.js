@@ -4,8 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import { IndexPage, SearchPage, RepoPage, Page404 } from './pages';
 import { NavBar } from './components/NavBar';
 
+
 function App() {
-  return (
+  return (    
     <div className="App">
       <NavBar />
       <Routes path='/' >
@@ -17,7 +18,7 @@ function App() {
         </Route>
         <Route path='*' element={<Page404 />} />
       </Routes>
-    </div>
+    </div>       
   );
 }
 
