@@ -7,7 +7,7 @@ export default function SearchPage() {
 
     return (
         <>
-            <h1>Search For Users</h1>
+            <h1 className="searchPage-header">Search For Users</h1>
             <SearchForm />
         </>
     );
