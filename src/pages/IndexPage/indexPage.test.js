@@ -19,20 +19,20 @@ describe("IndexPage", () => {
     });
 
     describe('button', () => {
-        it('should render a button element with text', () => {
-            // setup
-            const button = screen.getByRole('button');
-            // assert
-            expect(button).toBeInTheDocument();
-            expect(button.textContent).toBe('Press to begin Search');
-        });
+        // it('should render a button element with text', () => {
+        //     // setup
+        //     const button = screen.getByRole('button');
+        //     // assert
+        //     expect(button).toBeInTheDocument();
+        //     expect(button.textContent).toBe('Press to begin Search');
+        // });
 
-        it('Button should navigate to /search', async () => {
-            // setup
-            const button = screen.getByRole('button');
-            // assert
-            const buttonClick = await userEvent.click(button);
+        // it('Button should navigate to /search', async () => {
+        //     // setup
+        //     const button = screen.getByRole('button');
+        //     // assert
+        //     const buttonClick = await userEvent.click(button);
             
-        })
+        // })
     });
 })
