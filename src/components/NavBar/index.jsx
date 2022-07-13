@@ -1,7 +1,9 @@
 import React from "react";
+
 import { NavLink } from "react-router-dom";
 import { useNavigate, Outlet } from "react-router-dom";
 import { } from "react-router-dom";
+
 
 export function NavBar() {
     const navigate = useNavigate();
@@ -27,5 +29,5 @@ export function NavBar() {
         </header>
         <Outlet />
         </>
-    );
+    );        
 }
