@@ -1,15 +1,16 @@
-
+import axios from 'axios';
 import React, { useState, useEffect } from 'react'; 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function SearchForm(){
 
     const [username, setUsername] = useState('');
     const [submitValue, setSubmitValue] = useState('');
-    const [showRepos, setShowRepos] = useState([]);
-    const navigate = useNavigate();
+    const [repos, setRepos] = useState([]);
+    // const navigate = useNavigate();
 
     function handleUsername(e){
+        console.log(e.target.value)
         setUsername(e.target.value);
     }
 
@@ -23,15 +24,13 @@ function SearchForm(){
         
         async function fetchRepos(username){
             try{
-                const result = await fetch(`https://api.github.com/users/${username}/repos`);
-                const data = await result.json();
-                setShowRepos(data);
-                console.log(showRepos)
+                const GIT_USER_URL = `https://api.github.com/users/${username}/repos`;
+                const result = await axios.get(GIT_USER_URL);
+                setRepos(result.data);
             }catch(err){
                 console.log(err)
             }
-            
-            
+            console.log(repos)
         }
         fetchRepos(submitValue)
     }, [submitValue])
