@@ -18,7 +18,7 @@ export default function RepoPage({ submitValue }) {
             
         }
         fetchRepo(name);
-    }, [name])
+    }, [name, submitValue])
 
     return (
         <>
