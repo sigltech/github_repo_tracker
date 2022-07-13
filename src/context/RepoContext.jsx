@@ -1,13 +1,13 @@
-// import React, {createContext, useState} from 'react';
+import React, {createContext, useState} from 'react';
 
-// export const UserContext = createContext();
+export const RepoContext = createContext();
 
-// export const UserProvider = (props) => {
-//     const [users, setUsers] = useState();
+export const RepoProvider = (props) => {
+    const [repo, setRepo] = useState();
 
-//     return(
-//         <UserContext.Provider value={[users, setUsers]}>
-//             {props.children}
-//         </UserContext.Provider>
-//     )
-// }
+    return(
+        <RepoContext.Provider value={[repo, setRepo]}>
+            {props.children}
+        </RepoContext.Provider>
+    )
+}

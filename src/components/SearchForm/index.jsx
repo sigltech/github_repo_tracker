@@ -1,13 +1,13 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'; 
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function SearchForm(){
 
     const [username, setUsername] = useState('');
     const [submitValue, setSubmitValue] = useState('');
     const [repos, setRepos] = useState([]);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     function handleUsername(e){
         console.log(e.target.value)
@@ -30,7 +30,6 @@ function SearchForm(){
             }catch(err){
                 console.log(err)
             }
-            console.log(repos)
         }
         fetchRepos(submitValue)
     }, [submitValue])
@@ -39,10 +38,11 @@ function SearchForm(){
         <>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="enter_username">Type a username</label>
-                <input type="text" className="form" name="enter_username" onChange={handleUsername} value={username}/>
+                <input type="text" className="form" id="enter_username" onChange={handleUsername} value={username}/>
                 <input type="submit" className="form" value="Send!" />
             </form>
-            {/* <ul>{showRepos.map((repo) => <li>{repo.name}</li> )}</ul> */}
+            <ul>{repos.map((repo, index) => <li key={index} onClick={() => navigate(`/search/${repo.name}`)}>{repo.name}</li>)}</ul>
+            
         </>
     )
 }
