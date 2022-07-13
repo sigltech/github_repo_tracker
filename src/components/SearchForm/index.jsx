@@ -2,10 +2,10 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react'; 
 import { useNavigate } from "react-router-dom";
 
-function SearchForm(){
+function SearchForm({ submitValue, setSubmitValue }){
 
     const [username, setUsername] = useState('');
-    const [submitValue, setSubmitValue] = useState('');
+    // const [submitValue, setSubmitValue] = useState('');
     const [repos, setRepos] = useState([]);
     let navigate = useNavigate();
 
