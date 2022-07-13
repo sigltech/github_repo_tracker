@@ -10,11 +10,27 @@ export function RepoCard(repo) {
     }
     return (
         <>
-        <p className="repo-fullname">{repo.repo.full_name}</p>
-        <p>Language: {repo.repo.language}</p>
-        <p>Forks: {repo.repo.forks_count}</p>
-        <p>Last Updated: {repo.repo.updated_at}</p>
-        <button onClick={navigateToRepo} >Go Back</button>
+            <h2>{repo.repo.full_name}</h2>
+            <div className="cards">
+
+                <div className="card">
+                    <p className="title">Language:</p>
+                    <p>{repo.repo.language}</p>
+                </div>
+
+                <div className="card">
+                    <p className="title">Forks:</p>
+                    <p>{repo.repo.forks_count}</p>
+                </div>
+
+                <div className="card">
+                    <p className="title">Last Updated:</p>
+                    <p>{repo.repo.updated_at}</p>
+                </div>
+
+            </div>
+            <button onClick={navigateToRepo} >Go Back</button>
+
         </>
     );
 }

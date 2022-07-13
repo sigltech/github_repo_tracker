@@ -1,13 +1,44 @@
-.repo-h1-name {
-    font-size: 3rem;
-    z-index: 1;
-    text-align: center;
+div h1{
+    margin-top: 13vw;
+}
+
+h2{
+    margin-top: 0;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+  
+}
+
+.cards{
+    margin-top: 6vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70vw;
+}
+
+.card{
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(184, 183, 183);
+    -moz-box-shadow: 0px 0px 20px 0px rgb(184, 183, 183);
+    box-shadow: 0px 0px 20px 0px rgb(184, 183, 183);
+    width: 15rem;
+    height: 15rem;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
-.repo-fullname {
-    font-size: 1rem;
-    margin: 0;
+.title{
+    font-weight: 700;
+    font-size: 1.6rem
 }
-
-
