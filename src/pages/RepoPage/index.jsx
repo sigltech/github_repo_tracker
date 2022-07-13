@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { RepoCard } from "../../components/RepoCard";
-import { SearchForm } from "../../components/SearchForm";
 import { useParams } from "react-router-dom";
 import { SearchForm } from '../../components/SearchForm';
-import { RepoContext } from "../../context/RepoContext";
+// import { RepoContext } from "../../context/RepoContext";
 
 export default function RepoPage(submitValue) {
     const {name} = useParams();
-    const [repo, setRepo] = useContext(RepoContext);
+    // const [repo, setRepo] = useContext(RepoContext);
 
     useEffect( () => {
 
