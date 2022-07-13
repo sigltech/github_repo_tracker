@@ -3,7 +3,7 @@ import axios from "axios";
 import { RepoCard } from "../../components/RepoCard";
 import { useParams } from "react-router-dom";
 
-export default function RepoPage(submitValue) {
+export default function RepoPage({ submitValue }) {
     const {name} = useParams();
     const [repo, setRepo] = useState({});
 
@@ -11,7 +11,7 @@ export default function RepoPage(submitValue) {
 
         async function fetchRepo(name) {
 
-            const GITHUB_USER_URL = `https://api.github.com/repos/sigltech/Cake_website`;
+            const GITHUB_USER_URL = `https://api.github.com/repos/${submitValue}/${name}`;
             const result = await axios.get(GITHUB_USER_URL)
             setRepo(result.data);
             console.log(result.data)
