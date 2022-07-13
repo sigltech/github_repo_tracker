@@ -1,10 +1,13 @@
 import IndexPage from ".";
-import { screen, render } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import{ render } from "@testing-library/react";
 import userEvent, {UserEvent} from "@testing-library/user-event";
+import { BrowserRouter as Router } from "react-router-dom";
+
 describe("IndexPage", () => {
 
     beforeEach(() => {
-        render(<IndexPage />);
+        render(<Router><IndexPage /></Router>);
     });
 
     it('should render a H1 element with text', () => {
