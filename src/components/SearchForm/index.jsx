@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from 'react'; 
 
 function SearchForm(){
     const [username, setUsername] = useState('')
-    const [submitValue, setSubmitValue] = useState('mariesophiecd')
+    const [submitValue, setSubmitValue] = useState('')
 
     function handleUsername(e){
         setUsername(e.target.value);
@@ -27,11 +28,11 @@ function SearchForm(){
                 console.log(err)
             }
             
-           
+            
         }
-        fetchRepos()
-    }, [])
-
+        fetchRepos(submitValue)
+    }, [submitValue])
+    
 
 
     return(

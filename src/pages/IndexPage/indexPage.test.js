@@ -1,6 +1,6 @@
 import IndexPage from ".";
 import { screen, render } from "@testing-library/react";
-import {UserEvent} from "@testing-library/user-event";
+import userEvent, {UserEvent} from "@testing-library/user-event";
 describe("IndexPage", () => {
 
     beforeEach(() => {
@@ -24,11 +24,12 @@ describe("IndexPage", () => {
             expect(button.textContent).toBe('Press to begin Search');
         });
 
-        it('Button should navigate to /search', () => {
+        it('Button should navigate to /search', async () => {
             // setup
             const button = screen.getByRole('button');
             // assert
-            expect(button)
+            const buttonClick = await userEvent.click(button);
+            
         })
     });
 })

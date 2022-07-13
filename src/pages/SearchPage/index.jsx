@@ -1,5 +1,6 @@
 import React from "react";
 import SearchForm from "../../components/SearchForm";
+import './style.css'
 // import { UserContext } from "../../context/RepoContext";
 
 export default function SearchPage() {
@@ -7,7 +8,7 @@ export default function SearchPage() {
 
     return (
         <>
-            <h1>This is the SearchPage</h1>
+            <h1>Search For Users</h1>
             <SearchForm />
         </>
     );
