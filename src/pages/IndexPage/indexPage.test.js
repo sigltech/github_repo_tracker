@@ -1,10 +1,13 @@
 import IndexPage from ".";
-import { screen, render } from "@testing-library/react";
-import {UserEvent} from "@testing-library/user-event";
+import { screen } from "@testing-library/react";
+import{ render } from "@testing-library/react";
+import userEvent, {UserEvent} from "@testing-library/user-event";
+import { BrowserRouter as Router } from "react-router-dom";
+
 describe("IndexPage", () => {
 
     beforeEach(() => {
-        render(<IndexPage />);
+        render(<Router><IndexPage /></Router>);
     });
 
     it('should render a H1 element with text', () => {
@@ -24,11 +27,12 @@ describe("IndexPage", () => {
             expect(button.textContent).toBe('Press to begin Search');
         });
 
-        it('Button should navigate to /search', () => {
+        it('Button should navigate to /search', async () => {
             // setup
             const button = screen.getByRole('button');
             // assert
-            expect(button)
+            const buttonClick = await userEvent.click(button);
+            
         })
     });
 })
