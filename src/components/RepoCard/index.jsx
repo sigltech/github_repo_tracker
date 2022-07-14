@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export function RepoCard(repo) {
+export default function RepoCard(repo) {
     console.log(repo)
     const navigate = useNavigate();
 
