@@ -11,8 +11,12 @@ export default function RepoCard(repo) {
     }
     return (
         <>
-            <h2>{repo.repo.full_name}</h2>
+            <h2 >{repo.repo.full_name}</h2>
             <div className="cards">
+
+                <div className="card">
+                    <img src={repo.repo.owner.avatar_url} />
+                </div>
 
                 <div className="card">
                     <p className="title">Language:</p>
@@ -30,7 +34,7 @@ export default function RepoCard(repo) {
                 </div>
 
             </div>
-            <button onClick={navigateToRepo} >Go Back</button>
+            <button className="goback-btn" onClick={navigateToRepo} >Go Back</button>
 
         </>
     );

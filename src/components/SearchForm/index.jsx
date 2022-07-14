@@ -32,6 +32,7 @@ function SearchForm(){
                 const GIT_USER_URL = `https://api.github.com/users/${username}/repos`;
                 const result = await axios.get(GIT_USER_URL);
                 setRepos(result.data);
+                console.log(result.data)
             }catch (err) {
                 console.log(err)
             }
