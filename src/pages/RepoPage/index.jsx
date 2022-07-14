@@ -1,10 +1,12 @@
-import React, { useEffect, useState} from "react";
-import axios from "axios";
+import React, { useEffect, useState, useContext} from "react";
 import { RepoCard } from "../../components/RepoCard";
 import { useParams } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
+import axios from "axios";
 import './style.css'
 
-export default function RepoPage({ submitValue }) {
+export default function RepoPage(/*{ submitValue }*/) {
+    const [submitValue, setSubmitValue] = useContext(UserContext)
     const {name} = useParams();
     const [repo, setRepo] = useState({});
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function RepoCard(repo) {
     console.log(repo)
+
     const navigate = useNavigate();
 
     function navigateToRepo() {

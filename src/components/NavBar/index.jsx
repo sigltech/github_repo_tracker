@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate, Outlet } from "react-router-dom";
 
-
 export default function NavBar() {
     const navigate = useNavigate();
 
