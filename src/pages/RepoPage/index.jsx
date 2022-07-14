@@ -5,10 +5,10 @@ import { UserContext } from "../../context/UserContext";
 import axios from "axios";
 import './style.css'
 
-export default function RepoPage(/*{ submitValue }*/) {
+export default function RepoPage() {
     const [submitValue, setSubmitValue] = useContext(UserContext)
     const {name} = useParams();
-    const [repo, setRepo] = useState({});
+    const [repo, setRepo] = useState({owner: {avatar_url: ''}});
 
     useEffect( () => {
 
