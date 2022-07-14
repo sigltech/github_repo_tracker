@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { NavBar } from './components/NavBar';
+import NavBar from './components/NavBar';
 import { IndexPage, SearchPage, RepoPage, Page404 } from './pages';
 import { UserProvider } from './context/UserContext';
 import './App.css';

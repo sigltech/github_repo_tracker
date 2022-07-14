@@ -9,10 +9,15 @@ export default function RepoCard(repo) {
     function navigateToRepo() {
         navigate(-1)
     }
+    console.log(repo.repo.owner.avatar_url)
     return (
         <>
+            <img src={repo.repo.owner.avatar_url} alt="avatar" width='250px' />
             <h2>{repo.repo.full_name}</h2>
             <div className="cards">
+
+                <div className="card">
+                </div>
 
                 <div className="card">
                     <p className="title">Language:</p>
