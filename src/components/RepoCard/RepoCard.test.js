@@ -7,7 +7,7 @@ describe('RepoCard', () => {
         render(<Router><RepoCard /></Router>);
    }) 
 
-   it('Has a title', async () => {
+   it('Has a title', () => {
         //setup
         const mockTitle = 'Test Title';
         //assert
