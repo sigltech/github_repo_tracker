@@ -1,11 +1,12 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect, useContext } from 'react'; 
 import { useNavigate } from "react-router-dom";
+import { UserContext } from '../../context/UserContext';
 
-function SearchForm({ submitValue, setSubmitValue }){
+function SearchForm(){
 
+    const [submitValue, setSubmitValue] = useContext(UserContext);    
     const [username, setUsername] = useState('');
-    // const [submitValue, setSubmitValue] = useState('');
     const [repos, setRepos] = useState([]);
     let navigate = useNavigate();
 
@@ -21,7 +22,6 @@ function SearchForm({ submitValue, setSubmitValue }){
     }
 
     function navigateToRepo(e){
-        console.log(e.target.textContent)
         navigate(`/search/${e.target.textContent}`)
     }
 
