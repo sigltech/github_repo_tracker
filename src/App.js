@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { IndexPage, SearchPage, RepoPage, Page404 } from './pages';
-import { NavBar } from './components/NavBar';
+import NavBar from './components/NavBar';
 import { RepoProvider } from './context/RepoContext';
 
 function App() {
