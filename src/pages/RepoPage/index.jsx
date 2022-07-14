@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext} from "react";
-import { RepoCard } from "../../components/RepoCard";
+import RepoCard from "../../components/RepoCard";
 import { useParams } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import axios from "axios";

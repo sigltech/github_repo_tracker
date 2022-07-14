@@ -9,6 +9,7 @@ export default function RepoCard(repo) {
     function navigateToRepo() {
         navigate(-1)
     }
+    console.log(repo.repo.owner.avatar_url)
     return (
         <>
             <h2 >{repo.repo.full_name}</h2>
