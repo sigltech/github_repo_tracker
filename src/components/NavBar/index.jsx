@@ -1,9 +1,8 @@
 import React from "react";
-
 import { NavLink } from "react-router-dom";
 import { useNavigate, Outlet } from "react-router-dom";
 
-export function NavBar() {
+export default function NavBar() {
     const navigate = useNavigate();
 
     function navigateToSearch() {
@@ -22,7 +21,7 @@ export function NavBar() {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/search">Search</NavLink>
                 </div>
-                <button onClick={navigateToSearch}>Press to begin Search</button>
+                <button aria-label="button" onClick={navigateToSearch}>Press to begin Search</button>
             </nav>
         </header>
         <Outlet />

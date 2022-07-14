@@ -1,7 +1,6 @@
 import IndexPage from ".";
 import { screen } from "@testing-library/react";
 import{ render } from "@testing-library/react";
-import userEvent, {UserEvent} from "@testing-library/user-event";
 import { BrowserRouter as Router } from "react-router-dom";
 
 describe("IndexPage", () => {
@@ -15,24 +14,14 @@ describe("IndexPage", () => {
         const heading = screen.getByRole('heading');
         // assert
         expect(heading).toBeInTheDocument();
-        expect(heading.textContent).toBe('Learn about a Github Users information');
+        expect(heading.textContent).toBe(`Learn about a Github User's information`);
     });
 
-    describe('button', () => {
-        // it('should render a button element with text', () => {
-        //     // setup
-        //     const button = screen.getByRole('button');
-        //     // assert
-        //     expect(button).toBeInTheDocument();
-        //     expect(button.textContent).toBe('Press to begin Search');
-        // });
+    it(`should render an image`, () => {
+        // setup
+        const image = screen.getByAltText('github');
+        // assert
+        expect(image).toBeInTheDocument();
+    })
 
-        // it('Button should navigate to /search', async () => {
-        //     // setup
-        //     const button = screen.getByRole('button');
-        //     // assert
-        //     const buttonClick = await userEvent.click(button);
-            
-        // })
-    });
 })
